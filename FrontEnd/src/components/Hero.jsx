@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import heroImage from "../assets/heroImage.png";
 import { assets, cities } from "../assets/assets";
 import { useNavigate } from "react-router-dom";
-import { getTodayString } from "../utils/formatDate";
+import { getTodayString } from "../utils/FormatDate";
 import SearchBar from "./SearchBar";
 
 const Hero = () => {
