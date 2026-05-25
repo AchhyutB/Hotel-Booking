@@ -1,3 +1,4 @@
+// Rooms.jsx
 import React, { useEffect } from "react";
 import { cities } from "../assets/assets";
 import HotelCard from "../components/HotelCard";
@@ -12,6 +13,7 @@ const Rooms = () => {
     selectedSort,
     handleSortChange,
     clearFilters,
+    urlSearch,
   } = useSearch();
 
   useEffect(() => {
@@ -25,10 +27,24 @@ const Rooms = () => {
         subTitle="Browse our complete collection of exceptional properties around the world."
       />
 
+      {/* Search result banner */}
+      {urlSearch && (
+        <div className="mt-6 w-full flex items-center gap-3">
+          <p className="text-sm text-gray-600">
+            Showing results for <span className="font-semibold text-black">"{urlSearch}"</span>
+          </p>
+          <button
+            onClick={clearFilters}
+            className="text-xs text-gray-400 hover:text-black underline transition-all"
+          >
+            Clear
+          </button>
+        </div>
+      )}
+
       {/* Filter + Sort Bar */}
-      <div className="flex flex-col gap-4 mt-10 w-full">
+      <div className="flex flex-col gap-4 mt-6 w-full">
         <div className="flex items-center justify-between gap-4">
-          {/* Sort + Clear */}
           <div className="flex items-center gap-3 ml-auto">
             <select
               value={selectedSort}
@@ -41,7 +57,7 @@ const Rooms = () => {
               <option value="Newest First">Newest First</option>
             </select>
 
-            {(selectedCity !== "All" || selectedSort) && (
+            {(selectedCity !== "All" || selectedSort || urlSearch) && (
               <button
                 onClick={clearFilters}
                 className="px-4 py-1.5 text-sm border border-gray-300 rounded-full bg-white text-gray-600 hover:bg-gray-50 transition-all cursor-pointer"
@@ -94,7 +110,7 @@ const Rooms = () => {
       {filteredRooms.length === 0 ? (
         <div className="flex flex-col items-center justify-center mt-16 gap-4">
           <p className="text-gray-500">
-            No properties found. Try a different city or filter.
+            No properties found{urlSearch ? ` for "${urlSearch}"` : ""}. Try a different search or filter.
           </p>
           <button
             onClick={clearFilters}
