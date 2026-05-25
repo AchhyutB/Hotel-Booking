@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useAppContext } from "../context/AppContext";
-import { formatPrice } from "../utils/formatPrice";
-import { formatDate } from "../utils/formatDate";
+import { formatPrice } from "../utils/FormatPrice";
+import { formatDate } from "../utils/FormatDate";
 import { assets } from "../assets/assets";
 
 const Payment = () => {
