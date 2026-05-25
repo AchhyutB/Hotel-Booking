@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { useUser } from "@clerk/clerk-react";
 import { useAppContext } from "../context/AppContext";
 import { userBookingsDummyData, cities } from "../assets/assets";
-import { formatDate } from "../utils/formatDate";
-import { formatPrice } from "../utils/formatPrice";
+import { formatDate } from "../utils/FormatDate";
+import { formatPrice } from "../utils/FormatPrice";
 import { useNavigate } from "react-router-dom";
 import Title from "../components/Title";
 
