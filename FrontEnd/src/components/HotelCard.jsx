@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { assets } from "../assets/assets";
-import { formatPrice } from "../utils/formatPrice";
+import { formatPrice } from "../utils/FormatPrice";
 
 const HotelCard = ({ room, index }) => {
   const navigate = useNavigate();
