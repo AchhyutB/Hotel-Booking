@@ -8,8 +8,8 @@ import {
 } from "../assets/assets";
 import StarRating from "../components/StarRating";
 import { useAppContext } from "../context/AppContext";
-import { formatDate, getNights, getTodayString } from "../utils/formatDate";
-import { formatPrice } from "../utils/formatPrice";
+import { formatDate, getNights, getTodayString } from "../utils/FormatDate";
+import { formatPrice } from "../utils/FormatPrice";
 
 const ContactModal = ({ hotel, onClose }) => {
   return (
