@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { assets, cities } from "../assets/assets";
-import { getTodayString } from "../utils/formatDate";
+import { getTodayString } from "../utils/FormatDate";
 
 const SearchBar = ({ initialValues = {} }) => {
   const navigate = useNavigate();
