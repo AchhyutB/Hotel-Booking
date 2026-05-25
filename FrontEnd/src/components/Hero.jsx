@@ -48,7 +48,7 @@ const Hero = () => {
 
       <div className="mt-10 max-md:w-full"
         onSubmit={handleSearch}
-        // className="form bg-white text-gray-500 rounded-lg px-6 py-4 mt-10 flex flex-col md:flex-row max-md:items-start gap-4 max-md:my-4"
+        className="form bg-white text-gray-500 rounded-lg px-6 py-4 mt-10 flex flex-col md:flex-row max-md:items-start gap-4 max-md:my-4"
       >
         <div>
           <div className="flex items-center gap-2">
