@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { assets } from "../assets/assets";
-import { formatDate } from "../utils/formatDate";
-import { formatPrice } from "../utils/formatPrice";
+import { formatDate } from "../utils/FormatDate";
+import { formatPrice } from "../utils/FormatPrice";
 import { useAppContext } from "../context/AppContext";
 import ConfirmModal from "./ConfirmModal";
 
