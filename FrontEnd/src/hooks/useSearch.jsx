@@ -13,7 +13,7 @@ const useSearch = (locationSearch = "") => {
   const urlDest = searchParams.get("destination") || "";
   const urlCheckIn = searchParams.get("checkIn") || "";
   const urlCheckOut = searchParams.get("checkOut") || "";
-  const urlGuests = searchParams.get("guests") || "";
+  const urlGuests = searchParams.get("guests") || ""; 
 
   // Local filter state
   const [selectedRoomTypes, setSelectedRoomTypes] = useState([]);
