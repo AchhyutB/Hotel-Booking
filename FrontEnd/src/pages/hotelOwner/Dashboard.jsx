@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { assets, dashboardDummyData } from "../../assets/assets";
 import Title from "../../components/Title";
 import { useAppContext } from "../../context/AppContext";
-import { formatPrice } from "../../utils/formatPrice";
-import { formatDateNP } from "../../utils/formatDate";
+import { formatPrice } from "../../utils/FormatPrice";
+import { formatDateNP } from "../../utils/FormatDate";
 import {
   LineChart,
   Line,
